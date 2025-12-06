@@ -1,4 +1,4 @@
 # Minimal content for _config.yml
 title: Your Consulting Firm
 description: Strategy for AI, Deep Tech, and Biopharma.
-theme: jekyll-theme-primer
+theme: jekyll-theme-minimal
