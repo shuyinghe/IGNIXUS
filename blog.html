@@ -1,0 +1,31 @@
+---
+layout: default
+title: Strategic Insights Archive
+---
+
+<div class="container" style="padding: 60px 0;">
+    <h1 style="color: #605509; text-align: center; margin-bottom: 40px;">All Strategic Insights</h1>
+
+    {% for post in site.posts reversed %}
+    <div class="archive-post-entry" style="border-bottom: 1px solid #eee; padding: 20px 0;">
+        <h3 style="margin-top: 0; font-size: 1.5rem;">
+            <a href="{{ post.url | relative_url }}" style="color: #2c3e50; text-decoration: none;">{{ post.title }}</a>
+        </h3>
+        <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;">
+            Published: {{ post.date | date: "%B %d, %Y" }}
+            {% if post.categories.size > 0 %}
+            &bull; Categories: 
+            {% for category in post.categories %}
+                <span style="font-weight: 600;">{{ category }}</span>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+            {% endif %}
+        </p>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </div>
+    {% endfor %}
+
+    {% if site.posts.size == 0 %}
+        <p style="text-align: center; color: #888; padding: 50px;">We are preparing our first set of strategic articles. Check back soon!</p>
+    {% endif %}
+
+</div>
