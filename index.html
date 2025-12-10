@@ -811,7 +811,37 @@ We don't just advise; we instill the unflinching decision-making confidence requ
             </div>
         </div>
     </section>
+<section id="insights">
+        <div class="container">
+            <h2 style="text-align: center; color: #605509;">Latest Strategic Insights</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Our exclusive analysis on AI, deep tech regulations, and biopharma BD trends. Stay ahead of the market noise.</p>
 
+            <div class="post-feed-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                {% for post in site.posts limit: 3 %}
+                <div class="post-card" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s; background: white;">
+                    <div style="padding: 25px;">
+                        <span style="display: block; font-size: 0.85rem; color: #888; margin-bottom: 5px;">{{ post.date | date: "%B %d, %Y" }}</span>
+                        <h3 style="font-size: 1.4rem; color: #2c3e50; margin-bottom: 15px;">
+                            <a href="{{ post.url | relative_url }}" style="color: #605509; text-decoration: none;">{{ post.title }}</a>
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #555;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="read-more" style="font-weight: 600; color: #605509;">Read Article &rarr;</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% if site.posts.size == 0 %}
+                    <p style="grid-column: 1 / -1; text-align: center; color: #888;">No insights published yet. Check back soon for our first strategic analysis!</p>
+                {% endif %}
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="/blog.html" class="cta-button" style="background: #2c3e50;">View All Insights</a>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <p>&copy; 2025 IGNIXUS. All Rights Reserved. | <a href="/legal">Legal Terms (MSA)</a> | <a href="#">Privacy Policy</a></p>
