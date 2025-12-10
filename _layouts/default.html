@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | IGNIXUS</title>
-   <style>
+   
+    <style>
         /* BASE STYLES & RESET */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -180,7 +181,7 @@
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Ensures padding doesn't widen the element */
+            box-sizing: border-box;
         }
         #contact button {
             width: 100%;
@@ -215,11 +216,11 @@
             text-align: center;
             padding: 30px 0;
             background: #f5d199;
-            color: white;
+            color: #333;
             font-size: 0.9rem;
         }
         footer a {
-            color: #b3d1ff;
+            color: #605509;
         }
 
         /* Responsive Design */
@@ -231,19 +232,29 @@
                 font-size: 2rem;
             }
             nav ul {
-                display: none; /* Hide full nav on mobile for simplicity */
+                display: none;
             }
         }
     </style>
-</head>
+    </head>
+
 <body>
 
     <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/services.html">Services</a>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                  <img src="/IGNIXUS%20-%20LOGO.jpg" alt="IGNIXUS Logo">
+                  <span>IGNIXUS</span>
+                </div>
+                <ul>
+                  <li><a href="/about.html">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#contact">Request</a></li>
+                  <li><a href="/blog.html">Insights</a></li>
+                </ul>
             </nav>
+        </div>
     </header>
 
     <main>
@@ -251,7 +262,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Firm. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 IGNIXUS. All Rights Reserved. | <a href="/legal">Legal Terms (MSA)</a> | <a href="#">Privacy Policy</a></p>
+        </div>
     </footer>
 
 </body>
