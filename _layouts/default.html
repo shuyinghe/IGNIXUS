@@ -3,8 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Your Consulting Firm</title>
-    <link rel="stylesheet" href="/assets/css/style.css"> 
+    <title>{{ page.title }} | IGNIXUS</title>
+   <style>
+        /* BASE STYLES & RESET */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #1a1a1a;
+            margin-top: 0;
+            font-weight: 700;
+        }
+        a {
+            color: #605509;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: #f7f2f2;
+            border-bottom: 1px solid #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #605509;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        nav .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            color: #333;
+            font-weight: 600;
+            padding: 10px 0;
+            display: block;
+        }
+        nav ul li a:hover {
+            color: #605509;
+            text-decoration: none;
+        }
+
+        /* HERO SECTION */
+        #hero {
+            background: #f5d199;
+            text-align: center;
+            padding: 120px 0;
+            border-bottom: none;
+        }
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        #hero p {
+            font-size: 1.25rem;
+            color: #605509;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #605509;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-button:hover {
+            background: #605509;
+            text-decoration: none;
+        }
+
+        /* ABOUT SECTION */
+        #about .content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        #about .text-content {
+            flex: 2;
+        }
+        #about .key-offerings {
+            flex: 1;
+            padding: 20px;
+            background: #cec0ab;
+            border-left: 4px solid #;
+        }
+        #about .key-offerings h3 {
+            color: #605509;
+        }
+        #about .key-offering-item {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* SERVICES SECTION */
+        #services .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        #services .service-card {
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        #services .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        #services h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+
+        /* CONTACT/REQUEST SECTION */
+        #contact {
+            background: #cec0ab;
+            text-align: center;
+        }
+        #contact form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+        #contact input, #contact textarea, #contact select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't widen the element */
+        }
+        #contact button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* NEWSLETTER SECTION (CTA) */
+        #newsletter {
+            padding: 60px 0;
+            text-align: center;
+            background: #1a1a1a;
+            color: white;
+        }
+        #newsletter h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+        /* Placeholder styling for embedded forms */
+        .embedded-form-placeholder {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px dashed #777;
+            background: #333;
+            color: #ddd;
+            text-align: center;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #f5d199;
+            color: white;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #b3d1ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #about .content {
+                flex-direction: column;
+            }
+            #hero h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                display: none; /* Hide full nav on mobile for simplicity */
+            }
+        }
+    </style>
 </head>
 <body>
 
