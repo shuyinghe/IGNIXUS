@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[The Full, SEO-Friendly Title of Your Post]"
-date: YYYY-MM-DD HH:MM:SS -0500  # Use the ORIGINAL publish date and time
+date: 2025-09-16  # Use the ORIGINAL publish date and time
 author: Shuying He
 categories: [AI, Consulting, Biopharma] # Add 1-3 keywords for organization
 canonical_url: [https://www.linkedin.com/pulse/new-era-ai-investment-biopharma-life-sciences-advisors-x12ne/?trackingId=sVFa0AroGUkSiE3WXpXZSA%3D%3D] 
