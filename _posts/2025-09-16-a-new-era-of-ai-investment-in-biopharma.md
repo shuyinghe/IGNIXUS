@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "[The Full, SEO-Friendly Title of Your Post]"
-date: 2025-09-16  # Use the ORIGINAL publish date and time
+title: "[A New Era of AI investment in Biopharma]"
+date: 2025-09-16
 author: Shuying He
-categories: [AI, Consulting, Biopharma] # Add 1-3 keywords for organization
+categories: [AI, Investment, Biopharma]
 canonical_url: [https://www.linkedin.com/pulse/new-era-ai-investment-biopharma-life-sciences-advisors-x12ne/?trackingId=sVFa0AroGUkSiE3WXpXZSA%3D%3D] 
 ---
 # A New Era of AI investment in Biopharma
 
-![Alt text describing the image]({{ site.baseurl }}/assets/images/posts/ai-in-drug-development-20250916.jpg)
+![Alt text describing the image]({{ site.baseurl }}/assets/images/ai-in-drug-development-20250916.jpg)
 
 While AI investment is prevalent across almost every sector, the biopharma industry exhibits a distinct trajectory of increasing strategic collaboration. A key difference between 2024 and 2025 is a clear shift from exploratory partnerships to more strategic, integrated, and well-funded collaborations. These newer deals are focused on specific, high-impact applications of AI.
 
