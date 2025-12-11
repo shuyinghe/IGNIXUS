@@ -7,7 +7,7 @@ categories: [AI, Investment, Biopharma]
 canonical_url: https://www.linkedin.com/pulse/new-era-ai-investment-biopharma-life-sciences-advisors-x12ne/?trackingId=sVFa0AroGUkSiE3WXpXZSA%3D%3D
 ---
 
-![Alt text describing the image]({{ site.baseurl }}/assets/images/ai-in-drug-development-20250916.jpg)
+!({{ site.baseurl }}/assets/images/ai-in-drug-development-20250916.png)
 
 While AI investment is prevalent across almost every sector, the biopharma industry exhibits a distinct trajectory of increasing strategic collaboration. A key difference between 2024 and 2025 is a clear shift from exploratory partnerships to more strategic, integrated, and well-funded collaborations. These newer deals are focused on specific, high-impact applications of AI.
 
