@@ -9,7 +9,7 @@ title: Strategic Insights Archive
     {% for post in site.posts reversed %}
     <div class="archive-post-entry" style="border-bottom: 1px solid #eee; padding: 20px 0;">
         <h3 style="margin-top: 0; font-size: 1.5rem;">
-            <a href="{{ /Users/shuying/Documents/New Folder/New folder/Operation/GitHub/Website/IGNIXUS/_posts/2025-09-16-a-new-era-of-ai-investment-in-biopharma.md}}" style="color: #2c3e50; text-decoration: none;">{{ post.title }}</a>
+            <a href="{{ post.url | relative_url }}" style="color: #2c3e50; text-decoration: none;">{{ post.title }}</a>
         </h3>
         <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;">
             Published: {{ post.date | date: "%B %d, %Y" }}
@@ -25,7 +25,7 @@ title: Strategic Insights Archive
     {% endfor %}
 
     {% if site.posts.size == 0 %}
-        <p style="text-align: center; color: #888; padding: 50px;">We are preparing our new strategic articles. Check back soon!</p>
+        <p style="text-align: center; color: #888; padding: 50px;">We are preparing our first set of strategic articles. Check back soon!</p>
     {% endif %}
 
 </div>
