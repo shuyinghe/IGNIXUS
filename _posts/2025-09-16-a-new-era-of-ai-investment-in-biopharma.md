@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[A New Era of AI investment in Biopharma]"
-date: 2025-09-16
+title: "A New Era of AI investment in Biopharma"
+date: 2025-09-16 12:00:00 -0500
 author: Shuying He
 categories: [AI, Investment, Biopharma]
 canonical_url: https://www.linkedin.com/pulse/new-era-ai-investment-biopharma-life-sciences-advisors-x12ne/?trackingId=sVFa0AroGUkSiE3WXpXZSA%3D%3D
