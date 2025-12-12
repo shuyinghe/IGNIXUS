@@ -204,66 +204,45 @@
     margin-bottom: 10px;
 }
 
-/* --- STYLE FOR INDIVIDUAL POST CONTENT (When viewing the post) --- */
+/* --- STYLE FOR INDIVIDUAL POST CONTENT --- */
 
-.post-content {
-    /* Set max width for optimal reading comfort */
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
+/* 1. Wrapper/Container for Post Content (The new class you added) */
+.post-content-wrapper {
+    /* Limits line length for optimal reading (760px is standard) */
+    max-width: 760px; 
+    /* CRITICAL: Centers the block on the screen */
+    margin: 0 auto; 
+    /* Ensures padding on mobile devices */
+    padding: 40px 20px; 
 }
 
-.post-content h1 {
-    font-size: 2.5rem;
-    color: #605509; /* Use your brand color for the main title */
-    margin-bottom: 20px;
+/* 2. Ensure Headings, Paragraphs, and Lists are left-aligned inside the centered wrapper */
+.post-content-wrapper h1,
+.post-content-wrapper h2,
+.post-content-wrapper h3,
+.post-content-wrapper p,
+.post-content-wrapper ul,
+.post-content-wrapper ol,
+.post-content-wrapper blockquote {
+    /* Explicitly left-aligns text */
+    text-align: left; 
+    /* Improves paragraph spacing and readability */
+    line-height: 1.7; 
+    margin-bottom: 1.5rem;
 }
 
-.post-content h2 {
-    font-size: 1.8rem;
-    color: #1a1a1a;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #eee; /* Subtle separator */
-    padding-bottom: 5px;
-}
-
-.post-content h3 {
-    font-size: 1.4rem;
-    color: #2c3e50;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.post-content p {
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-/* Styles for lists (if you use bullet points) */
-.post-content ul, .post-content ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-/* Centering Images (as requested previously) */
-.post-content img {
+/* 3. Centering Images (as requested previously) */
+.post-content-wrapper img {
     display: block; 
-    margin: 20px auto; 
+    margin: 20px auto; /* Centers the image block */
     max-width: 100%;
     height: auto;
-    border-radius: 4px; /* Optional: Soft rounded corners for images */
+    border-radius: 4px;
 }
 
-/* Blockquote styling for quotes/callouts */
-.post-content blockquote {
-    border-left: 5px solid #605509;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: #f9f9f9;
-    font-style: italic;
-    color: #555;
-}
+/* You can remove the original, redundant .post-content styles 
+   if you were using them, and replace them with the .post-content-wrapper styles. */
+
 
         /* CONTACT/REQUEST SECTION */
         #contact {
@@ -345,16 +324,21 @@
 <body>
 
     <main>
+    {% if page.layout == "post" %}
+    
+    <div class="post-content-wrapper">
         {{ content }} 
-        {% if page.layout == "post" %}
-            {% include post-disclaimer.html %}
-        {% endif %}
+        {% include post-disclaimer.html %}
+    </div>
 
-    </main>
+    {% else %}
+        {{ content }}
+    {% endif %}
+</main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 IGNIXUS. All Rights Reserved. | <a href="/legal">Legal Terms (MSA)</a> | <a href="#">Privacy Policy</a></p>
+            <p>&copy; 2025 IGNIXUS. All Rights Reserved. | <a href="/legal.html">Legal Terms (MSA)</a> | <a href="/privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 
