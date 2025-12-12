@@ -16,16 +16,16 @@ While AI investment is prevalent across almost every sector, the biopharma indus
 
 In 2024, the biopharma AI deal landscape was still in a more nascent, exploratory phase. While there were significant deals, they were often aimed at establishing a foothold in the AI space and testing the technology's capabilities.
 
- ## High-Value Partnerships: 
+## High-Value Partnerships: 
  Major deals in 2024 were characterized by large potential milestone payments, often exceeding $1 billion. Examples include Roche's partnership with Dyno Therapeutics for AAV gene therapy vectors and Recursion's acquisition of Exscientia, highlighting the industry's willingness to invest heavily in the promise of AI.
  
- ## AI for Drug Discovery:
+## AI for Drug Discovery:
  he primary use case for AI collaborations was in the early stages of drug discovery, particularly in target identification and lead optimization. The Sanofi-OpenAI-Formation Bio collaboration was a landmark deal, showcasing a "first-in-class" approach to leveraging generative AI for drug development, although it was a foundational step rather than an immediate product launch.
  
- ## Cross-Industry Collaborations:
+## Cross-Industry Collaborations:
  There was a notable trend of biopharma companies partnering with technology giants and AI startups. This was exemplified by Alphabet's Isomorphic Labs securing partnerships with both Lilly and Novartis. This period was about pairing the biopharma industry's deep biological knowledge with the computational power of tech companies.
  
- ## Investment in Infrastructure:
+## Investment in Infrastructure:
  A key theme was the investment in the underlying AI infrastructure and platforms themselves. Deals like the launch of Xaira Therapeutics with over $1 billion in funding underscored a move to build end-to-end AI drug discovery capabilities from the ground up.
 
 
