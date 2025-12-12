@@ -7,7 +7,7 @@ tags: [AI, Investment, Biopharma]
 canonical_url: https://www.linkedin.com/pulse/new-era-ai-investment-biopharma-life-sciences-advisors-x12ne/?trackingId=sVFa0AroGUkSiE3WXpXZSA%3D%3D
 ---
 
-![image for blog 20250916](/{{ site.baseurl }}/assets/images/ai-in-drug-development-20250916.jpg)
+![image for blog 20250916](assets/images/ai-in-drug-development-20250916.jpg)
 
 
 While AI investment is prevalent across almost every sector, the biopharma industry exhibits a distinct trajectory of increasing strategic collaboration. A key difference between 2024 and 2025 is a clear shift from exploratory partnerships to more strategic, integrated, and well-funded collaborations. These newer deals are focused on specific, high-impact applications of AI.
@@ -46,7 +46,7 @@ There's been a trend of large, private funding rounds for AI-first biotechs. For
 The application of AI is expanding beyond the lab and into the clinic. Companies are using AI to streamline patient recruitment, optimize trial design, and analyze real-world data, all with the goal of shortening development timelines and increasing the success rate of clinical programs.
 
 ![Table 1 Comparison of Biopharma AI Deals (2024 vs. 2025)
-]({{ site.baseurl }}/assets/images/20250916-table.jpg)
+](assets/images/20250916-table.jpg)
 
 ## Summary
 In essence, 2024 was the year of building the foundation and making bold statements about AI's importance. 2025 represents the year of executing on that vision, with more refined, integrated, and application-specific deals that aim to translate the promise of AI into tangible progress in the drug development pipeline.

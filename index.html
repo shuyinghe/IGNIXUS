@@ -53,17 +53,17 @@ title: IGNIXUS | AI, Deep Tech, and Biopharma Strategy
         <div class="service-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div class="service-card" style="border-top: 4px solid #C9963F;">
                 <h3 style="color: #2c3e50;">1. Niche Interpretation</h3>
-                <p><strong>The Value:</strong> Filtering Noise & Judgment.</p>
+                <p>The Value:<strong> Filtering Noise & Judgment.</strong></p>
                 <p>We apply our judgment to filter noise and interpret sector-specific contexts. This identifies the <strong>precise, viable global niches</strong> where your technology will dominate, avoiding costly market entry failures.</p>
             </div>
             <div class="service-card" style="border-top: 4px solid #C9963F;">
                 <h3 style="color: #2c3e50;">2. Strategic Mapping</h3>
-                <p><strong>The Value:</strong> Productization & Asset Creation.</p>
+                <p>The Value:<strong> Productization & Asset Creation.</strong></p>
                 <p>We apply disciplined frameworks to turn ideas into defendable products. We provide step-by-step guidance for <strong>creating protectable assets (IP, validated concepts)</strong>, transforming scientific ambition into tangible product strategy.</p>
             </div>
             <div class="service-card" style="border-top: 4px solid #C9963F;">
                 <h3 style="color: #2c3e50;">3. Impactful Returns</h3>
-                <p><strong>The Value:</strong> Foresight & Certainty.</p>
+                <p>The Value:<strong> Foresight & Certainty.</strong></p>
                 <p>We provide the strategic foresight required to unlock new growth opportunities. This secures <strong>impactful, certain returns</strong> by anticipating competitive and regulatory shifts before they happen.</p>
             </div>
         </div>
@@ -108,6 +108,38 @@ title: IGNIXUS | AI, Deep Tech, and Biopharma Strategy
                         <p>We only initiate detailed pricing quotes and NDAs <strong>after</strong> agreeing on the strategic scope. We ensure cost certainty is established before any work begins.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+</section>
+
+section id="insights">
+<div class="container">
+            <h2 style="text-align: center; color: #605509;">Latest Strategic Insights</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Our exclusive analysis on AI, deep tech regulations, and biopharma BD trends. Stay ahead of the market noise.</p>
+
+            <div class="post-feed-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                {% for post in site.posts limit: 3 %}
+                <div class="post-card" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s; background: white;">
+                    <div style="padding: 25px;">
+                        <span style="display: block; font-size: 0.85rem; color: #888; margin-bottom: 5px;">{{ post.date | date: "%B %d, %Y" }}</span>
+                        <h3 style="font-size: 1.4rem; color: #2c3e50; margin-bottom: 15px;">
+                            <a href="{{ post.url | relative_url }}" style="color: #605509; text-decoration: none;">{{ post.title }}</a>
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #555;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="read-more" style="font-weight: 600; color: #605509;">Read Article &rarr;</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% if site.posts.size == 0 %}
+                    <p style="grid-column: 1 / -1; text-align: center; color: #888;">No insights published yet. Check back soon for our first strategic analysis!</p>
+                {% endif %}
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="/blog.html" class="cta-button" style="background: #2c3e50;">View All Insights</a>
             </div>
         </div>
 </section>
@@ -612,36 +644,4 @@ title: IGNIXUS | AI, Deep Tech, and Biopharma Strategy
     </script>
         </div>
     </div>  </div>
-</section>
-
-<section id="insights">
-<div class="container">
-            <h2 style="text-align: center; color: #605509;">Latest Strategic Insights</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Our exclusive analysis on AI, deep tech regulations, and biopharma BD trends. Stay ahead of the market noise.</p>
-
-            <div class="post-feed-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                
-                {% for post in site.posts limit: 3 %}
-                <div class="post-card" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s; background: white;">
-                    <div style="padding: 25px;">
-                        <span style="display: block; font-size: 0.85rem; color: #888; margin-bottom: 5px;">{{ post.date | date: "%B %d, %Y" }}</span>
-                        <h3 style="font-size: 1.4rem; color: #2c3e50; margin-bottom: 15px;">
-                            <a href="{{ post.url | relative_url }}" style="color: #605509; text-decoration: none;">{{ post.title }}</a>
-                        </h3>
-                        <p style="font-size: 0.95rem; color: #555;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-                        <a href="{{ post.url | relative_url }}" class="read-more" style="font-weight: 600; color: #605509;">Read Article &rarr;</a>
-                    </div>
-                </div>
-                {% endfor %}
-
-                {% if site.posts.size == 0 %}
-                    <p style="grid-column: 1 / -1; text-align: center; color: #888;">No insights published yet. Check back soon for our first strategic analysis!</p>
-                {% endif %}
-
-            </div>
-
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="/blog.html" class="cta-button" style="background: #2c3e50;">View All Insights</a>
-            </div>
-        </div>
 </section>
