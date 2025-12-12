@@ -206,40 +206,38 @@
 
 /* --- STYLE FOR INDIVIDUAL POST CONTENT --- */
 
-/* 1. Wrapper/Container for Post Content (The new class you added) */
+/* 1. Wrapper/Container for Post Content (Limits width and centers it) */
 .post-content-wrapper {
-    /* Limits line length for optimal reading (760px is standard) */
     max-width: 760px; 
-    /* CRITICAL: Centers the block on the screen */
     margin: 0 auto; 
-    /* Ensures padding on mobile devices */
     padding: 40px 20px; 
 }
 
-/* 2. Ensure Headings, Paragraphs, and Lists are left-aligned inside the centered wrapper */
+/* 2. Content Alignment and Spacing (The fix is here!) */
 .post-content-wrapper h1,
 .post-content-wrapper h2,
 .post-content-wrapper h3,
-.post-content-wrapper p,
+.post-content-wrapper p, /* <-- Targets the paragraphs */
 .post-content-wrapper ul,
 .post-content-wrapper ol,
 .post-content-wrapper blockquote {
-    /* Explicitly left-aligns text */
+    /* Ensures every selected element stacks vertically */
+    display: block; 
+    /* Enforces left-alignment (ragged right) for readability */
     text-align: left; 
-    /* Improves paragraph spacing and readability */
+    /* Improves paragraph spacing */
     line-height: 1.7; 
     margin-bottom: 1.5rem;
 }
 
-/* 3. Centering Images (as requested previously) */
+/* 3. Centering Images (already working) */
 .post-content-wrapper img {
     display: block; 
-    margin: 20px auto; /* Centers the image block */
+    margin: 20px auto; 
     max-width: 100%;
     height: auto;
     border-radius: 4px;
 }
-
 
 
         /* CONTACT/REQUEST SECTION */
