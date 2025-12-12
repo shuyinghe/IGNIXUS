@@ -161,88 +161,66 @@
             font-size: 1.5rem;
         }
 
-/* --- STYLE FOR POST ARCHIVE LIST (blog.html) --- */
+        /* --- STYLE FOR POST ARCHIVE LIST (blog.html) --- */
+        .archive-post-entry {
+            border-bottom: 1px solid #eee; 
+            padding: 25px 0;
+            transition: background-color 0.2s ease;
+        }
+        .archive-post-entry:last-child {
+            border-bottom: none;
+        }
+        .archive-post-entry:hover {
+            background-color: #fafafa; 
+        }
+        .archive-post-entry h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .archive-post-entry h3 a {
+            color: #2c3e50; 
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .archive-post-entry h3 a:hover {
+            text-decoration: underline; 
+            color: #605509;
+        }
+        .archive-post-entry p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
 
-.archive-post-entry {
-    /* Insights Section */
-    border-bottom: 1px solid #eee; 
-    padding: 25px 0;
-    transition: background-color 0.2s ease; /* Smooth hover transition */
-}
+        /* --- STYLE FOR INDIVIDUAL POST CONTENT --- */
+        /* 1. Wrapper/Container for Post Content */
+        .post-content-wrapper {
+            max-width: 760px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
 
-.archive-post-entry:last-child {
-    border-bottom: none; /* Remove border on the last post entry */
-}
+        /* 2. Content Alignment and Spacing */
+        .post-content-wrapper h1,
+        .post-content-wrapper h2,
+        .post-content-wrapper h3,
+        .post-content-wrapper p,
+        .post-content-wrapper ul,
+        .post-content-wrapper ol,
+        .post-content-wrapper blockquote {
+            text-align: left; 
+            line-height: 1.7; 
+            margin-bottom: 1.5rem;
+        }
 
-.archive-post-entry:hover {
-    /* Light hover background for better user experience */
-    background-color: #fafafa; 
-}
-
-.archive-post-entry h3 {
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-.archive-post-entry h3 a {
-    /* Style the title link itself */
-    color: #2c3e50; 
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.archive-post-entry h3 a:hover {
-    /* Underline the title link on hover */
-    text-decoration: underline; 
-    color: #605509; /* Highlight color */
-}
-
-/* Metadata styling (Date and Categories) */
-.archive-post-entry p {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-/* --- STYLE FOR INDIVIDUAL POST CONTENT --- */
-
-/* 1. Wrapper/Container for Post Content (The new class you added) */
-.post-content-wrapper {
-    /* Limits line length for optimal reading (760px is standard) */
-    max-width: 760px; 
-    /* CRITICAL: Centers the block on the screen */
-    margin: 0 auto; 
-    /* Ensures padding on mobile devices */
-    padding: 40px 20px; 
-}
-
-/* 2. Ensure Headings, Paragraphs, and Lists are left-aligned inside the centered wrapper */
-.post-content-wrapper h1,
-.post-content-wrapper h2,
-.post-content-wrapper h3,
-.post-content-wrapper p,
-.post-content-wrapper ul,
-.post-content-wrapper ol,
-.post-content-wrapper blockquote {
-    /* Explicitly left-aligns text */
-    text-align: left; 
-    /* Improves paragraph spacing and readability */
-    line-height: 1.7; 
-    margin-bottom: 1.5rem;
-}
-
-/* 3. Centering Images (as requested previously) */
-.post-content-wrapper img {
-    display: block; 
-    margin: 20px auto; /* Centers the image block */
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-/* You can remove the original, redundant .post-content styles 
-   if you were using them, and replace them with the .post-content-wrapper styles. */
-
+        /* 3. Centering Images */
+        .post-content-wrapper img {
+            display: block; 
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
 
         /* CONTACT/REQUEST SECTION */
         #contact {
@@ -283,7 +261,6 @@
             color: white;
             margin-bottom: 30px;
         }
-        /* Placeholder styling for embedded forms */
         .embedded-form-placeholder {
             max-width: 500px;
             margin: 0 auto;
@@ -319,56 +296,36 @@
             }
         }
     </style>
-    </head>
+</head>
 
 <body>
 
-    <main>
-    {% if page.layout == "post" %}
-    
-    <div class="post-content-wrapper">
-        {{ content }} 
-        {% include post-disclaimer.html %}
-    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="{{ '/assets/images/IGNIXUS%20-%20LOGO.jpg' | relative_url }}" alt="IGNIXUS Logo">
+                    <span>IGNIXUS</span>
+                </div>
+                <ul>
+                    <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#contact">Request</a></li>
+                    <li><a href="{{ '/blog.html' | relative_url }}">Insights</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    {% else %}
+    <main>
+        {% if page.layout == "post" %}
+        <div class="post-content-wrapper">
+            {{ content }} 
+            {% include post-disclaimer.html %}
+        </div>
+        {% else %}
         {{ content }}
-    {% endif %}
-</main>
+        {% endif %}
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 IGNIXUS. All Rights Reserved. | <a href="/legal.html">Legal Terms (MSA)</a> | <a href="/privacy.html">Privacy Policy</a></p>
-        </div>
-    </footer>
-
-    <script>
-    // 1. Disable the Right-Click (Context Menu) on the entire document
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // 2. Disable standard copy/paste keyboard shortcuts (Ctrl+C, Cmd+C, etc.)
-    document.addEventListener('keydown', function(event) {
-        // Check for F12 (Developer Tools)
-        if (event.key === 'F12') {
-            event.preventDefault();
-        }
-        
-        // Check for Ctrl+Shift+I (Developer Tools)
-        if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-            event.preventDefault();
-        }
-
-        // Check for Ctrl/Cmd + C (Copy) and Ctrl/Cmd + U (View Source)
-        if ((event.ctrlKey || event.metaKey) && (event.key === 'c' || event.key === 'u')) {
-            event.preventDefault();
-        }
-    });
-
-    // 3. Optional: Alert the user if they try to copy
-    // document.addEventListener('copy', function(event) {
-    //     event.preventDefault();
-    //     alert('Content on this page is protected by copyright. Please cite the source.');
-    // });
-</script>
-</body>
-</html>
