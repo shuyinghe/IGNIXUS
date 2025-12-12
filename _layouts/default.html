@@ -161,6 +161,110 @@
             font-size: 1.5rem;
         }
 
+/* --- STYLE FOR POST ARCHIVE LIST (blog.html) --- */
+
+.archive-post-entry {
+    /* Insights Section */
+    border-bottom: 1px solid #eee; 
+    padding: 25px 0;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+}
+
+.archive-post-entry:last-child {
+    border-bottom: none; /* Remove border on the last post entry */
+}
+
+.archive-post-entry:hover {
+    /* Light hover background for better user experience */
+    background-color: #fafafa; 
+}
+
+.archive-post-entry h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.archive-post-entry h3 a {
+    /* Style the title link itself */
+    color: #2c3e50; 
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.archive-post-entry h3 a:hover {
+    /* Underline the title link on hover */
+    text-decoration: underline; 
+    color: #605509; /* Highlight color */
+}
+
+/* Metadata styling (Date and Categories) */
+.archive-post-entry p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* --- STYLE FOR INDIVIDUAL POST CONTENT (When viewing the post) --- */
+
+.post-content {
+    /* Set max width for optimal reading comfort */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.post-content h1 {
+    font-size: 2.5rem;
+    color: #605509; /* Use your brand color for the main title */
+    margin-bottom: 20px;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee; /* Subtle separator */
+    padding-bottom: 5px;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Styles for lists (if you use bullet points) */
+.post-content ul, .post-content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Centering Images (as requested previously) */
+.post-content img {
+    display: block; 
+    margin: 20px auto; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Optional: Soft rounded corners for images */
+}
+
+/* Blockquote styling for quotes/callouts */
+.post-content blockquote {
+    border-left: 5px solid #605509;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    font-style: italic;
+    color: #555;
+}
+
         /* CONTACT/REQUEST SECTION */
         #contact {
             background: #cec0ab;
@@ -242,6 +346,10 @@
 
     <main>
         {{ content }} 
+        {% if page.layout == "post" %}
+            {% include post-disclaimer.html %}
+        {% endif %}
+
     </main>
 
     <footer>
@@ -250,5 +358,33 @@
         </div>
     </footer>
 
+    <script>
+    // 1. Disable the Right-Click (Context Menu) on the entire document
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // 2. Disable standard copy/paste keyboard shortcuts (Ctrl+C, Cmd+C, etc.)
+    document.addEventListener('keydown', function(event) {
+        // Check for F12 (Developer Tools)
+        if (event.key === 'F12') {
+            event.preventDefault();
+        }
+        
+        // Check for Ctrl+Shift+I (Developer Tools)
+        if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+            event.preventDefault();
+        }
+
+        // Check for Ctrl/Cmd + C (Copy) and Ctrl/Cmd + U (View Source)
+        if ((event.ctrlKey || event.metaKey) && (event.key === 'c' || event.key === 'u')) {
+            event.preventDefault();
+        }
+    });
+
+    // 3. Optional: Alert the user if they try to copy
+    // document.addEventListener('copy', function(event) {
+    //     event.preventDefault();
+    //     alert('Content on this page is protected by copyright. Please cite the source.');
+    // });
+</script>
 </body>
 </html>
