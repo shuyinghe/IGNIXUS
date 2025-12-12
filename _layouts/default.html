@@ -204,7 +204,7 @@
     margin-bottom: 10px;
 }
 
-/* --- STYLE FOR INDIVIDUAL POST CONTENT --- */
+/* --- STYLE FOR INDIVIDUAL POST CONTENT (FIXED) --- */
 
 /* 1. Wrapper/Container for Post Content (Limits width and centers it) */
 .post-content-wrapper {
@@ -213,7 +213,7 @@
     padding: 40px 20px; 
 }
 
-/* 2. Content Alignment and Spacing (The fix is here!) */
+/* 2. Content Alignment, Spacing, and Line-Wrap FIX */
 .post-content-wrapper h1,
 .post-content-wrapper h2,
 .post-content-wrapper h3,
@@ -223,6 +223,8 @@
 .post-content-wrapper blockquote {
     /* Ensures every selected element stacks vertically */
     display: block; 
+    /* CRITICAL FIX: Forces text to wrap normally inside the container */
+    white-space: normal; 
     /* Enforces left-alignment (ragged right) for readability */
     text-align: left; 
     /* Improves paragraph spacing */
@@ -230,7 +232,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* 3. Centering Images (already working) */
+/* 3. Centering Images */
 .post-content-wrapper img {
     display: block; 
     margin: 20px auto; 
